@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
-    public float speed = 3;
+    public float speed = 1;
     private Animator miAnimator;
 
 
