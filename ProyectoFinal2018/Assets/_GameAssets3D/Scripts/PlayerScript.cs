@@ -4,29 +4,53 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
-    public float speed = 5;
+    public float speed = 3;
     private Animator miAnimator;
+
+
     void Start() {
         miAnimator = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+
     void Update() {
-        if (Input.GetKeyDown(KeyCode.W)) {
+        if (Input.GetKey(KeyCode.W)) {
             miAnimator.SetBool("Andando", true);
-            transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * speed);
+            transform.Translate(new Vector3(0, 0, 2) * Time.deltaTime * speed);
 
         } else {
-            transform.Translate(new Vector3(0, 0, 0) * Time.deltaTime * speed);
+            miAnimator.SetBool("Andando", false);
+            transform.Translate(new Vector3(0, 0, 0) * Time.deltaTime);
         }
-        
-        if (Input.GetKeyDown(KeyCode.S)) {
+        if (Input.GetKey(KeyCode.A)) {
+
+            miAnimator.SetBool("Andando", true);
+            transform.Rotate(0, -2, 0);
+           
+
+        }
+        if (Input.GetKey(KeyCode.D)) {
+
+            miAnimator.SetBool("Andando", true);
+            transform.Rotate(0, 2, 0);
+           
+        }
+        if (Input.GetKey(KeyCode.Space)) {
 
             miAnimator.SetBool("Andando", false);
-        }
+            miAnimator.SetBool("Saltando", true);
+            
 
-        if (Input.GetKeyDown(KeyCode.P)) {
+        }
+        if (Input.GetMouseButtonDown(0)) {
             miAnimator.SetTrigger("Punch");
         }
+
+
+
     }
 }
+       
+       
+    
+
