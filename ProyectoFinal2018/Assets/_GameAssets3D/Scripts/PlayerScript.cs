@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
+    Animator miAnimator;
+    float corriendo = 0.10f;
 
-    public float speed = 1;
-    private Animator miAnimator;
+
 
 
     void Start() {
@@ -14,45 +15,29 @@ public class PlayerScript : MonoBehaviour {
 
 
     void Update() {
-        if (Input.GetKey(KeyCode.W)) {
-            miAnimator.SetBool("Saltando", false);
-            miAnimator.SetBool("Andando", true);
-            transform.Translate(new Vector3(0, 0, 2) * Time.deltaTime * speed);
-
-        } else {
-            miAnimator.SetBool("Saltando", false);
-            miAnimator.SetBool("Andando", false);
-            transform.Translate(new Vector3(0, 0, 0) * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            miAnimator.SetBool("Saltando", false);
-            miAnimator.SetBool("Andando", true);
-            transform.Rotate(0, -2, 0);
-           
+        if (Input.GetKey(KeyCode.UpArrow) && !Input.GetKey(KeyCode.LeftShift)) {
+            corriendo = corriendo - 0.01f;
+            corriendo = Mathf.Max(0.11f, corriendo);
+            miAnimator.SetFloat("corriendo", corriendo);
+        } else if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) {
+            corriendo = corriendo + 0.01f;
+            corriendo = Mathf.Min(1, corriendo);
+            miAnimator.SetFloat("corriendo", corriendo);
+        } else if (!Input.GetKey(KeyCode.UpArrow)) {
+            corriendo = corriendo - 0.01f;
+            corriendo = Mathf.Max(0f, corriendo);
+            miAnimator.SetFloat("corriendo", corriendo);
 
         }
-        if (Input.GetKey(KeyCode.D)) {
-            miAnimator.SetBool("Saltando", false);
-            miAnimator.SetBool("Andando", true);
-            transform.Rotate(0, 2, 0);
-           
+        if (corriendo > 0.1f) {
+
+            transform.Rotate(0, Input.GetAxis("Horizontal"), 0);
         }
-        if (Input.GetKeyDown(KeyCode.Space)) {
-
-            miAnimator.SetBool("Saltando", true);
-
-
-
-        }
-        if (Input.GetMouseButtonDown(0)) {
-            miAnimator.SetTrigger("Punch");
-        }
-
-
-
     }
 }
-       
-       
-    
+
+
+
+
+
 
