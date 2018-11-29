@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour {
     Animator miAnimator;
     float corriendo = 0.10f;
+    public float speedAndar = 2f;
+    public float speedCorrer = 2f;
 
 
 
@@ -22,7 +24,7 @@ public class PlayerScript : MonoBehaviour {
         } else if (Input.GetKey(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftShift)) {
             corriendo = corriendo + 0.01f;
             corriendo = Mathf.Min(1, corriendo);
-            miAnimator.SetFloat("corriendo", corriendo);
+            miAnimator.SetFloat("corriendo", corriendo );
         } else if (!Input.GetKey(KeyCode.UpArrow)) {
             corriendo = corriendo - 0.01f;
             corriendo = Mathf.Max(0f, corriendo);
