@@ -179,7 +179,7 @@ ModelImporter:
     4300002: OccupyGuy_BrowsAnimGeo
     4300004: OccupyGuy_EyesAnimGeo
     4300006: OccupyGuy_MouthAnimGeo
-    7400000: Idle
+    7400000: IdleKaya
     9500000: //RootNode
     13700000: OccupyGuy_Body_Mesh
     13700002: OccupyGuy_BrowsAnimGeo
@@ -254,7 +254,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle
+      name: IdleKaya
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 499
