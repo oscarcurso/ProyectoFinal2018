@@ -39,10 +39,10 @@ public class PlayerScript : MonoBehaviour {
             miAnimator.SetTrigger("ostiando");
 
         }
-        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Space)) {
+       /* if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.Space)) {
             miAnimator.SetTrigger("ostiando");
 
-        }
+        }*/
 
         if (corriendo > 0.1f) {
 
