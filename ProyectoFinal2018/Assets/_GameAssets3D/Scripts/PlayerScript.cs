@@ -18,12 +18,12 @@ public class PlayerScript : MonoBehaviour {
 
 
     void Update() {
-        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.CapsLock)) {
+        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space)) {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo - 0.01f;
             corriendo = Mathf.Max(0.11f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
-        } else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.CapsLock)) {
+        } else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Space)) {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo + 0.01f;
             corriendo = Mathf.Min(1, corriendo);
@@ -35,7 +35,7 @@ public class PlayerScript : MonoBehaviour {
             miAnimator.SetFloat("corriendo", corriendo);
 
         }
-        if (Input.GetKey(KeyCode.Space)) {
+        if (Input.GetMouseButtonDown(0)) {
             miAnimator.SetTrigger("ostiando");
 
         }
@@ -49,6 +49,7 @@ public class PlayerScript : MonoBehaviour {
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotar, 0);
         }
     }
+   
 }
 
 

@@ -30,9 +30,9 @@ public class EnemigoScript : MonoBehaviour {
 
         switch (estado) {
 
-            case Estado.Idle:
+           /* case Estado.Idle:
                 ComprobarDestino();
-                break;
+                break;*/
 
             case Estado.Andando:
                
@@ -98,5 +98,7 @@ public class EnemigoScript : MonoBehaviour {
         agente.destination = position;
         estado = Estado.Distraido;
     }
+
    
+
 }
