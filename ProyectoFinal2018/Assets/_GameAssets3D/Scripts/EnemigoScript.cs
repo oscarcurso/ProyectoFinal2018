@@ -22,6 +22,7 @@ public class EnemigoScript : MonoBehaviour {
     void Start() {
         agente = GetComponent<NavMeshAgent>();
         AsignarPuntoPatrulla();
+        miAnimator = GetComponent<Animator>();
     }
     void Update() {
        
@@ -35,7 +36,7 @@ public class EnemigoScript : MonoBehaviour {
                 break;*/
 
             case Estado.Andando:
-               
+                miAnimator.SetBool("corriendo", false);
                 ComprobarDestino();
                 break;
 
@@ -63,7 +64,7 @@ public class EnemigoScript : MonoBehaviour {
                 out rch,
                 Mathf.Infinity)) {
                 if (rch.transform.gameObject.name == "Player") {
-                   // textATiro.text = "A tiro: SÍ";
+                    
                     estado = Estado.Siguiendo;
                 } else {
                    // textATiro.text = "A tiro: NO";
