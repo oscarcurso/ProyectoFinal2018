@@ -12,17 +12,19 @@ public class EnemigoScript : MonoBehaviour {
     public GameObject player;
     public Transform[] puntosPatrulla = new Transform[5];
     NavMeshAgent agente;
-    enum Estado { Idle, Andando, Corriendo, Saltando, Disparando, Siguiendo, Distraido };
-    Estado estado = Estado.Idle;
-    const int TIEMPO_ESPERA = 1;
-    float anguloVision = 25;
-    float distanciaVision = 6;
+    enum Estado { Andando, Siguiendo };
+    Estado estado = Estado.Andando;
+  
+    float anguloVision = 35;
+    float distanciaVision = 7;
 
 
     void Start() {
         agente = GetComponent<NavMeshAgent>();
-        AsignarPuntoPatrulla();
         miAnimator = GetComponent<Animator>();
+        AsignarPuntoPatrulla();
+        
+       
     }
     void Update() {
        
@@ -31,23 +33,20 @@ public class EnemigoScript : MonoBehaviour {
 
         switch (estado) {
 
-           /* case Estado.Idle:
-                ComprobarDestino();
-                break;*/
 
             case Estado.Andando:
-                miAnimator.SetBool("corriendo", false);
+              
                 ComprobarDestino();
                 break;
 
             case Estado.Siguiendo:              
                 agente.destination = player.transform.position;
                 miAnimator.SetBool("corriendo", true);
+                
+
                 break;
 
-            case Estado.Distraido:
-                ComprobarDestino();
-                break;
+            
         }
     }
 
@@ -58,47 +57,49 @@ public class EnemigoScript : MonoBehaviour {
         if (distancia < distanciaVision && angulo < anguloVision) {
             Debug.DrawLine(transform.position, player.transform.position, Color.red, 1);
             RaycastHit rch;
-            if (Physics.Raycast(
+            estado = Estado.Siguiendo;
+           /* if (Physics.Raycast(
                 transform.position,
                 direccion,
                 out rch,
                 Mathf.Infinity)) {
                 if (rch.transform.gameObject.name == "Player") {
                     
-                    estado = Estado.Siguiendo;
-                } else {
+                    
+                } 
+                else {
                    // textATiro.text = "A tiro: NO";
                 }
-            }
-        } else {
-           // textATiro.text = "A tiro: NO";
+            }*/
+        } 
+        else {
+          
         }
 
-        //textDTP.text = "DTP:" + distancia.ToString();
-       // textATP.text = "ATP:" + angulo.ToString();
+        
     }
 
     private void ComprobarDestino() {
         if (!agente.pathPending) {
             if (agente.remainingDistance <= agente.stoppingDistance + 0.1) {
-                //animador.SetBool("andando", false);
-                estado = Estado.Idle;
-                Invoke("AsignarPuntoPatrulla", TIEMPO_ESPERA);
+             
+                estado = Estado.Andando;
+                Invoke("AsignarPuntoPatrulla",1);
             }
         }
     }
     private void AsignarPuntoPatrulla() {
-        if (estado != Estado.Distraido) {
+        
             int pp = Random.Range(0, puntosPatrulla.Length);
             agente.destination = puntosPatrulla[pp].position;
             estado = Estado.Andando;
-        }
+        
     }
 
-    public void SetDistraccion(Vector3 position) {
+  /*  public void SetDistraccion(Vector3 position) {
         agente.destination = position;
         estado = Estado.Distraido;
-    }
+    }*/
 
    
 
