@@ -15,9 +15,10 @@ public class PlayerScript : MonoBehaviour {
 
     void Start() {
         miAnimator = GetComponent<Animator>();
+        Transform punyo;
+        GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
+
     }
-
-
     void Update() {
         if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space)) {
             miAnimator.ResetTrigger("ostiando");
@@ -38,7 +39,7 @@ public class PlayerScript : MonoBehaviour {
         }
         if (Input.GetMouseButtonDown(0)) {
             miAnimator.SetTrigger("ostiando");
-            Invoke("Golpe", 0.5f);
+
 
         }
 
@@ -49,9 +50,7 @@ public class PlayerScript : MonoBehaviour {
         }
     }
 
-    private void Golpe() {
-        Instantiate(Torta, Generador.transform.position, Quaternion.identity);
-    }
+
 
 }
 
