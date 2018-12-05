@@ -42,7 +42,9 @@ public class EnemigoScript : MonoBehaviour {
             case Estado.Siguiendo:              
                 agente.destination = player.transform.position;
                 miAnimator.SetBool("corriendo", true);
-                
+                agente.speed = agente.speed + 2;
+                //GetComponent<NavMeshAgent>().speed = new Vector3(0,3,0);
+
 
                 break;
 
