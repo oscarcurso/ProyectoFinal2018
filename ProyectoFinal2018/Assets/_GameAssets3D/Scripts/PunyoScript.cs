@@ -13,7 +13,7 @@ public class PunyoScript : MonoBehaviour {
 	void Update () {
 		
 	}
-    private void OnTriggerEnter(Collider collision) {
+    private void OnCollisionEnter(Collision collision) {
 
         if (collision.gameObject.tag == "Elvis") {
             print("colision Elvis");

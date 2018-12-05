@@ -35,7 +35,7 @@ public class EnemigoScript : MonoBehaviour {
 
 
             case Estado.Andando:
-                miAnimator.SetBool("Andando", true);
+                miAnimator.SetBool("corriendo", false);
                 ComprobarDestino();
                 break;
 
@@ -49,7 +49,8 @@ public class EnemigoScript : MonoBehaviour {
                 break;
 
             case Estado.Ostiado:
-
+                miAnimator.SetBool("ostiado", true);
+                agente.isStopped = true;
 
                 break;
 
@@ -92,7 +93,15 @@ public class EnemigoScript : MonoBehaviour {
     }
 
 
-    
+    private void OnCollisionEnter(Collision collision) {
+
+        if (collision.gameObject.name == "Puneteador") {
+            print("colision Elvis");
+
+            estado = Estado.Ostiado;
+
+        }
+    }
 
 
 }

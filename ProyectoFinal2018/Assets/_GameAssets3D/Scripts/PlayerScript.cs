@@ -9,8 +9,9 @@ public class PlayerScript : MonoBehaviour {
     public float speedCorrer = 2f;
     public float speedRotar = 5f;
 
+    [SerializeField] GameObject Torta;
+    [SerializeField] Transform Generador;
 
- 
 
     void Start() {
         miAnimator = GetComponent<Animator>();
@@ -27,7 +28,7 @@ public class PlayerScript : MonoBehaviour {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo + 0.01f;
             corriendo = Mathf.Min(1, corriendo);
-            miAnimator.SetFloat("corriendo", corriendo );
+            miAnimator.SetFloat("corriendo", corriendo);
         } else if (!Input.GetKey(KeyCode.W)) {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo - 0.01f;
@@ -37,19 +38,21 @@ public class PlayerScript : MonoBehaviour {
         }
         if (Input.GetMouseButtonDown(0)) {
             miAnimator.SetTrigger("ostiando");
+            Invoke("Golpe", 0.5f);
 
         }
-       /* if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.Space)) {
-            miAnimator.SetTrigger("ostiando");
 
-        }*/
 
         if (corriendo > 0.1f) {
 
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotar, 0);
         }
     }
-   
+
+    private void Golpe() {
+        Instantiate(Torta, Generador.transform.position, Quaternion.identity);
+    }
+
 }
 
 
