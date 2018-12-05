@@ -7,7 +7,7 @@ public class PlayerScript : MonoBehaviour {
     float corriendo = 0.10f;
     public float speedAndar = 2f;
     public float speedCorrer = 2f;
-    public float speedRotar = 2f;
+    public float speedRotar = 5f;
 
 
  
