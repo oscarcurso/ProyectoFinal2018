@@ -26356,6 +26356,10 @@ Prefab:
       propertyPath: m_TagString
       value: Elvis
       objectReference: {fileID: 0}
+    - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
   m_IsPrefabAsset: 0
@@ -27770,6 +27774,10 @@ Prefab:
     - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
       propertyPath: m_Name
       value: Elvis1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
@@ -42969,6 +42977,10 @@ Prefab:
     - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
       propertyPath: m_TagString
       value: Elvis
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
