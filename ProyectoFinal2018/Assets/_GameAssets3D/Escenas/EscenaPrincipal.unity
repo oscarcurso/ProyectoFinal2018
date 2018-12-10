@@ -20241,6 +20241,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7aa715a2e736284a9f1be98d2b779c6, type: 2}
   m_IsPrefabAsset: 0
+--- !u!195 &792109358 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 195265837261611082, guid: 5ef8ff0156a05be4da07eedcebd4c275,
+    type: 2}
+  m_PrefabInternal: {fileID: 1611868691}
 --- !u!95 &792109361 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95815394514136294, guid: 5ef8ff0156a05be4da07eedcebd4c275,
@@ -45858,6 +45863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elvisAnimator: {fileID: 792109361}
+  agenteElvis: {fileID: 792109358}
 --- !u!1001 &1878146065
 Prefab:
   m_ObjectHideFlags: 0

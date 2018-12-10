@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PunyoScript : MonoBehaviour {
 
     public Animator elvisAnimator;
+    public NavMeshAgent agenteElvis; 
 	
 	void Start () {
 		
@@ -21,6 +23,7 @@ public class PunyoScript : MonoBehaviour {
             print("colision Elvis");
 
             elvisAnimator.SetBool("ostiado", true);
+            agenteElvis.Stop();
 
         }
     } 
