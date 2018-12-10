@@ -30,7 +30,7 @@ public class PunyoScript : MonoBehaviour {
             agenteElvis.Stop();
 
         }
-        if (collider.gameObject.name == "Abuela") {
+        if (collider.gameObject.name == "Abuela1") {
             print("colision Abuela");
 
             abuelaAnimator.SetBool("ostiado", true);
