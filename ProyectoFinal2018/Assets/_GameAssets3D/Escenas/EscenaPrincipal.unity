@@ -20241,6 +20241,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7aa715a2e736284a9f1be98d2b779c6, type: 2}
   m_IsPrefabAsset: 0
+--- !u!95 &792109361 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95815394514136294, guid: 5ef8ff0156a05be4da07eedcebd4c275,
+    type: 2}
+  m_PrefabInternal: {fileID: 1611868691}
 --- !u!4 &792856598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4666381426756134, guid: 96948ec34ee19bf41854a361d5d293dd,
@@ -29497,7 +29502,43 @@ Prefab:
       propertyPath: near clip plane
       value: 0.75
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 65082533231281304, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.09827082
+      objectReference: {fileID: 0}
+    - target: {fileID: 65082533231281304, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: m_Center.x
+      value: 0.11423007
+      objectReference: {fileID: 0}
+    - target: {fileID: 65082533231281304, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: m_Center.y
+      value: -0.007463216
+      objectReference: {fileID: 0}
+    - target: {fileID: 65082533231281304, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: m_Center.z
+      value: 0.008469052
+      objectReference: {fileID: 0}
+    - target: {fileID: 65082533231281304, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: m_Size.z
+      value: 0.12248431
+      objectReference: {fileID: 0}
+    - target: {fileID: 54486622997693950, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 65082533231281304, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 54486622997693950, guid: db6591e28aae196488c8bade021d6219, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: db6591e28aae196488c8bade021d6219, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1146369168
@@ -45800,6 +45841,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4443098639831322, guid: cbc797179eb7a0045a93fd4ee2ade434,
     type: 2}
   m_PrefabInternal: {fileID: 1873851133}
+--- !u!1 &1874103068 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1054743660114724, guid: db6591e28aae196488c8bade021d6219,
+    type: 2}
+  m_PrefabInternal: {fileID: 1146266547}
+--- !u!114 &1874103070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1874103068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb7d7b3550f58d448725f0383dcef70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elvisAnimator: {fileID: 792109361}
 --- !u!1001 &1878146065
 Prefab:
   m_ObjectHideFlags: 0

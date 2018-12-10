@@ -8,14 +8,17 @@ public class PlayerScript : MonoBehaviour {
     public float speedAndar = 2f;
     public float speedCorrer = 2f;
     public float speedRotar = 5f;
+    
 
-    [SerializeField] GameObject Torta;
-    [SerializeField] Transform Generador;
+   
+
+    // [SerializeField] GameObject Torta;
+    //[SerializeField] Transform Generador;
 
 
     void Start() {
         miAnimator = GetComponent<Animator>();
-        Transform punyo;
+        //Transform punyo;
         GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
 
     }
@@ -49,6 +52,8 @@ public class PlayerScript : MonoBehaviour {
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotar, 0);
         }
     }
+ 
+  
 
 
 

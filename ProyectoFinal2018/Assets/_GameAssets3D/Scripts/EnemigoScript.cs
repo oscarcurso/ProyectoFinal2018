@@ -93,15 +93,7 @@ public class EnemigoScript : MonoBehaviour {
     }
 
 
-    private void OnCollisionEnter(Collision collision) {
-
-        if (collision.gameObject.tag == "Puneteador") {
-            print("colision Elvis");
-
-            estado = Estado.Ostiado;
-
-        }
-    }
+    
 
 
 }
