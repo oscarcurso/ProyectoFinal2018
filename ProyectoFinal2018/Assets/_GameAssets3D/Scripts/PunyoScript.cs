@@ -6,9 +6,13 @@ using UnityEngine.AI;
 public class PunyoScript : MonoBehaviour {
 
     public Animator elvisAnimator;
-    public NavMeshAgent agenteElvis; 
-	
-	void Start () {
+    public NavMeshAgent agenteElvis;
+    public Animator abuelaAnimator;
+    public NavMeshAgent agenteAbuela;
+    public Animator chicaAnimator;
+    public NavMeshAgent agenteChica;
+
+    void Start () {
 		
 	}
 	
@@ -24,6 +28,20 @@ public class PunyoScript : MonoBehaviour {
 
             elvisAnimator.SetBool("ostiado", true);
             agenteElvis.Stop();
+
+        }
+        if (collider.gameObject.name == "Abuela") {
+            print("colision Abuela");
+
+            abuelaAnimator.SetBool("ostiado", true);
+            agenteAbuela.Stop();
+
+        }
+        if (collider.gameObject.name == "Chica") {
+            print("colision Chica");
+
+            chicaAnimator.SetBool("ostiado", true);
+            agenteChica.Stop();
 
         }
     } 

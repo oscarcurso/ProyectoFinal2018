@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
-public class EnemigoScript : MonoBehaviour {
+public class ElvisScript : MonoBehaviour {
     public Text textVida;
     public Text textPuntos;
   
