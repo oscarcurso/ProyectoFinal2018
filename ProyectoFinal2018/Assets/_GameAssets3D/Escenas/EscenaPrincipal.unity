@@ -30908,6 +30908,16 @@ Prefab:
       propertyPath: agenteAbuela4
       value: 
       objectReference: {fileID: 1643221873}
+    - target: {fileID: 114582612150761626, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: txtvida
+      value: 
+      objectReference: {fileID: 648132931}
+    - target: {fileID: 114582612150761626, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: txtPuntos
+      value: 
+      objectReference: {fileID: 334770407}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6591e28aae196488c8bade021d6219, type: 2}
   m_IsPrefabAsset: 0
