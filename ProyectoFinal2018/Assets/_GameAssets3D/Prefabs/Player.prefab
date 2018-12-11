@@ -1432,8 +1432,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719429326303630}
-  m_LocalRotation: {x: 0.001156387, y: 0.9845984, z: 0.0020529223, w: -0.1748153}
-  m_LocalPosition: {x: 9.026, y: -20.458, z: 17.174}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -62.99, y: -5.52, z: -10.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4841865136953092}
@@ -1445,7 +1445,7 @@ Transform:
   - {fileID: 4760120113514152}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -0.25500003, y: 200.13599, z: 0.089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4118326998462984
 Transform:
   m_ObjectHideFlags: 1
@@ -2023,7 +2023,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1054743660114724}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.025, y: -0, z: -0.112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4796979227803332}
@@ -2332,14 +2332,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1943764903890526}
-  m_LocalRotation: {x: -0.00070584624, y: 0.041709885, z: -0.00017144404, w: 0.9991295}
-  m_LocalPosition: {x: 0.01, y: 2.103, z: -1.701}
+  m_LocalRotation: {x: 0.12700471, y: 0.044009637, z: -0.012031889, w: 0.99085224}
+  m_LocalPosition: {x: -0.04, y: 2.29, z: -1.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4535455872933312}
   m_Father: {fileID: 4102248294390114}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -0.08, y: 4.781, z: -0.023000002}
+  m_LocalEulerAnglesHint: {x: 14.64, y: 4.99, z: -0.75}
 --- !u!4 &4825329599453316
 Transform:
   m_ObjectHideFlags: 1
@@ -2597,9 +2597,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.75
+  near clip plane: 0.01
   far clip plane: 1000
-  field of view: 56
+  field of view: 54
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2712,14 +2712,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898830271112212}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotationRange: {x: 120, y: 120}
-  rotationSpeed: 5
-  dampingTime: 0.2
+  rotationSpeed: 3
+  dampingTime: 0.38
   autoZeroVerticalOnMobile: 1
   autoZeroHorizontalOnMobile: 0
   relative: 1
@@ -2748,8 +2748,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb7d7b3550f58d448725f0383dcef70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  elvisAnimator: {fileID: 0}
-  agenteElvis: {fileID: 0}
+  elvisAnimator1: {fileID: 0}
+  agenteElvis1: {fileID: 0}
+  elvisAnimator2: {fileID: 0}
+  agenteElvis2: {fileID: 0}
+  elvisAnimator3: {fileID: 0}
+  agenteElvis3: {fileID: 0}
+  abuelaAnimator1: {fileID: 0}
+  agenteAbuela1: {fileID: 0}
+  abuelaAnimator2: {fileID: 0}
+  agenteAbuela2: {fileID: 0}
+  abuelaAnimator3: {fileID: 0}
+  agenteAbuela3: {fileID: 0}
+  chicaAnimator1: {fileID: 0}
+  agenteChica1: {fileID: 0}
+  chicaAnimator2: {fileID: 0}
+  agenteChica2: {fileID: 0}
+  chicaAnimator3: {fileID: 0}
+  agenteChica3: {fileID: 0}
 --- !u!135 &135343453535574784
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -2758,7 +2774,7 @@ SphereCollider:
   m_GameObject: {fileID: 1943764903890526}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.21832398
   m_Center: {x: -1.8433419e-10, y: -3.0843863e-12, z: 0.0028921366}

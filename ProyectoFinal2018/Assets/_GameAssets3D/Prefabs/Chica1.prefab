@@ -2484,7 +2484,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
 --- !u!136 &136534167956200206
 CapsuleCollider:
   m_ObjectHideFlags: 1
