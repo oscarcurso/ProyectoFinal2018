@@ -17,6 +17,8 @@ public class PunyoScript : MonoBehaviour {
     public NavMeshAgent agenteAbuela2;
     public Animator abuelaAnimator3;
     public NavMeshAgent agenteAbuela3;
+    public Animator abuelaAnimator4;
+    public NavMeshAgent agenteAbuela4;
     public Animator chicaAnimator1;
     public NavMeshAgent agenteChica1;
     public Animator chicaAnimator2;
@@ -61,42 +63,49 @@ public class PunyoScript : MonoBehaviour {
             print("colision Abuela1");
 
             abuelaAnimator1.SetBool("ostiado", true);
-            agenteAbuela1.Stop();
+            agenteAbuela1.isStopped = true;
 
         }
         if (collider.gameObject.name == "Abuela2") {
             print("colision Abuela2");
 
             abuelaAnimator2.SetBool("ostiado", true);
-            agenteAbuela2.Stop();
+            agenteAbuela2.isStopped = true;
 
         }
         if (collider.gameObject.name == "Abuela3") {
             print("colision Abuela3");
 
             abuelaAnimator3.SetBool("ostiado", true);
-            agenteAbuela3.Stop();
+            agenteAbuela3.isStopped = true;
+
+        }
+        if (collider.gameObject.name == "Abuela4") {
+            print("colision Abuela4");
+
+            abuelaAnimator4.SetBool("ostiado", true);
+            agenteAbuela4.isStopped = true;
 
         }
         if (collider.gameObject.name == "Chica1") {
             print("colision Chica1");
 
             chicaAnimator1.SetBool("ostiado", true);
-            agenteChica1.Stop();
+            agenteChica1.isStopped = true;
 
         }
         if (collider.gameObject.name == "Chica2") {
             print("colision Chica2");
 
             chicaAnimator2.SetBool("ostiado", true);
-            agenteChica2.Stop();
+            agenteChica2.isStopped = true;
 
         }
         if (collider.gameObject.name == "Chica3") {
             print("colision Chica3");
 
             chicaAnimator3.SetBool("ostiado", true);
-            agenteChica3.Stop();
+            agenteChica3.isStopped = true;
 
         }
     } 
