@@ -38,21 +38,21 @@ public class PunyoScript : MonoBehaviour {
             print("colision Elvis1");
 
             elvisAnimator1.SetBool("ostiado", true);
-            agenteElvis1.Stop();
+            agenteElvis1.isStopped =true;
 
         }
         if (collider.gameObject.name == "Elvis2") {
             print("colision Elvis2");
 
             elvisAnimator2.SetBool("ostiado", true);
-            agenteElvis2.Stop();
+            agenteElvis2.isStopped = true;
 
         }
         if (collider.gameObject.name == "Elvis3") {
             print("colision Elvis3");
 
             elvisAnimator3.SetBool("ostiado", true);
-            agenteElvis3.Stop();
+            agenteElvis3.isStopped = true;
 
         }
 

@@ -10,7 +10,7 @@ public class ElvisScript : MonoBehaviour {
   
     Animator miAnimator;
     public GameObject player;
-    public Transform[] puntosPatrulla = new Transform[5];
+    public Transform[] puntosPatrulla = new Transform[7];
     NavMeshAgent agente;
     enum Estado { Andando, Siguiendo, Ostiado };
     Estado estado = Estado.Andando;
