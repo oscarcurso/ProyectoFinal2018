@@ -12,8 +12,7 @@ public class PlayerScript : MonoBehaviour {
 
    
 
-    // [SerializeField] GameObject Torta;
-    //[SerializeField] Transform Generador;
+   
 
 
     void Start() {
@@ -47,7 +46,7 @@ public class PlayerScript : MonoBehaviour {
         }
 
 
-        if (corriendo > 0.1f) {
+        if (corriendo >= 0f) {
 
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotar, 0);
         }
