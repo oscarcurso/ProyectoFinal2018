@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class AbuelaScript : MonoBehaviour {
     public Text textVida;
     public Text textPuntos;
+    
 
     Animator miAnimator;
     public GameObject player;
@@ -22,6 +23,7 @@ public class AbuelaScript : MonoBehaviour {
     void Start() {
         agente = GetComponent<NavMeshAgent>();
         miAnimator = GetComponent<Animator>();
+     
         AsignarPuntoPatrulla();
 
 
@@ -55,6 +57,7 @@ public class AbuelaScript : MonoBehaviour {
                 break;
 
         }
+        
     }
 
     private void VerificarObjectivo() {
@@ -91,6 +94,7 @@ public class AbuelaScript : MonoBehaviour {
         estado = Estado.Andando;
 
     }
+   
 
 
 

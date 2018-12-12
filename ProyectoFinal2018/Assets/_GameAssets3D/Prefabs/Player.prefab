@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 4539982548565582}
   - component: {fileID: 65082533231281304}
   - component: {fileID: 114582612150761626}
+  - component: {fileID: 82825538579021870}
   m_Layer: 0
   m_Name: Puneteador
   m_TagString: Ostiador
@@ -1433,7 +1434,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719429326303630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.99, y: -5.52, z: -10.69}
+  m_LocalPosition: {x: -29.24, y: -0.74, z: -33.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4841865136953092}
@@ -2651,6 +2652,101 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898830271112212}
   m_Enabled: 1
+--- !u!82 &82825538579021870
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1054743660114724}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7776785a40a07e041b213b7609ceb899, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95671689064583372
 Animator:
   serializedVersion: 3
@@ -2718,7 +2814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationRange: {x: 120, y: 120}
-  rotationSpeed: 3
+  rotationSpeed: 2
   dampingTime: 0.38
   autoZeroVerticalOnMobile: 1
   autoZeroHorizontalOnMobile: 0
@@ -2737,6 +2833,8 @@ MonoBehaviour:
   speedAndar: 10
   speedCorrer: 10
   speedRotar: 4
+  speedRotarParado: 2
+  txtVida: {fileID: 0}
 --- !u!114 &114582612150761626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2760,12 +2858,16 @@ MonoBehaviour:
   agenteAbuela2: {fileID: 0}
   abuelaAnimator3: {fileID: 0}
   agenteAbuela3: {fileID: 0}
+  abuelaAnimator4: {fileID: 0}
+  agenteAbuela4: {fileID: 0}
   chicaAnimator1: {fileID: 0}
   agenteChica1: {fileID: 0}
   chicaAnimator2: {fileID: 0}
   agenteChica2: {fileID: 0}
   chicaAnimator3: {fileID: 0}
   agenteChica3: {fileID: 0}
+  txtvida: {fileID: 0}
+  txtPuntos: {fileID: 0}
 --- !u!135 &135343453535574784
 SphereCollider:
   m_ObjectHideFlags: 1

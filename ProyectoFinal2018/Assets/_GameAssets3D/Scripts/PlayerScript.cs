@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour {
     private int danyo;
 
     public Text txtVida;
+   
 
 
 
