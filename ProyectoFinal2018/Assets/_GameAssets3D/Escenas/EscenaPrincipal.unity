@@ -1023,7 +1023,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -6342,6 +6342,10 @@ Prefab:
       propertyPath: puntosPatrulla.Array.data[3]
       value: 
       objectReference: {fileID: 1278150403}
+    - target: {fileID: 1118758976454610, guid: b8558b0fb9408844e91bd1ae5a4ae2e3, type: 2}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8558b0fb9408844e91bd1ae5a4ae2e3, type: 2}
   m_IsPrefabAsset: 0
@@ -11805,6 +11809,10 @@ Prefab:
       propertyPath: puntosPatrulla.Array.data[3]
       value: 
       objectReference: {fileID: 1209460913}
+    - target: {fileID: 1118758976454610, guid: b8558b0fb9408844e91bd1ae5a4ae2e3, type: 2}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8558b0fb9408844e91bd1ae5a4ae2e3, type: 2}
   m_IsPrefabAsset: 0
@@ -27041,7 +27049,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
       propertyPath: m_TagString
-      value: Elvis
+      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
       propertyPath: m_IsActive
@@ -28443,6 +28451,10 @@ Prefab:
         type: 2}
       propertyPath: m_ApplyRootMotion
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
+      propertyPath: m_TagString
+      value: Enemigo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
@@ -30918,6 +30930,16 @@ Prefab:
       propertyPath: txtPuntos
       value: 
       objectReference: {fileID: 334770407}
+    - target: {fileID: 114460580494761572, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: txtVida
+      value: 
+      objectReference: {fileID: 648132931}
+    - target: {fileID: 114252060069851598, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: rotationSpeed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6591e28aae196488c8bade021d6219, type: 2}
   m_IsPrefabAsset: 0
@@ -33241,6 +33263,10 @@ Prefab:
       propertyPath: puntosPatrulla.Array.data[3]
       value: 
       objectReference: {fileID: 1209460913}
+    - target: {fileID: 1118758976454610, guid: b8558b0fb9408844e91bd1ae5a4ae2e3, type: 2}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8558b0fb9408844e91bd1ae5a4ae2e3, type: 2}
   m_IsPrefabAsset: 0
@@ -43885,7 +43911,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
       propertyPath: m_TagString
-      value: Elvis
+      value: Enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
       propertyPath: m_IsActive
@@ -47437,6 +47463,10 @@ Prefab:
       propertyPath: puntosPatrulla.Array.data[3]
       value: 
       objectReference: {fileID: 1142610037}
+    - target: {fileID: 1583576028431318, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
+      propertyPath: m_TagString
+      value: Enemigo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
   m_IsPrefabAsset: 0

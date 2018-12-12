@@ -30,6 +30,7 @@ public class PunyoScript : MonoBehaviour {
     public Text txtvida;
     public Text txtPuntos;
     private int puntos = 0;
+    
 
 
     void Start () {

@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_GameAssets3D/Escenas/EscenaPrincipal.unity
     guid: d1539119b0bc15e4a86fbec0165a1897
+  - enabled: 1
+    path: Assets/_GameAssets3D/Escenas/EscenaSecundaria.unity
+    guid: 7f17db4dd3c30a744a02ab217129628f
+  - enabled: 1
+    path: Assets/_GameAssets3D/Escenas/EscenaGameOver.unity
+    guid: 4a56f5f08f43cc44ab53fc66614dd871
   m_configObjects: {}

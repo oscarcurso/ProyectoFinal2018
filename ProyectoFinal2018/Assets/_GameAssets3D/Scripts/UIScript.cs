@@ -14,10 +14,13 @@ public class UIScript : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void BotonInicio() {
+    public void BotonInicioNivel1() {
         SceneManager.LoadScene(1);
     }
-    
+    public void BotonInicioNivel2() {
+        SceneManager.LoadScene(2);
+    }
+
     public void BotonExit() {
         Application.Quit();
     }

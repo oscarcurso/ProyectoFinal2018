@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour {
     Animator miAnimator;
@@ -8,17 +9,31 @@ public class PlayerScript : MonoBehaviour {
     public float speedAndar = 2f;
     public float speedCorrer = 2f;
     public float speedRotar = 5f;
-    
+    public float speedRotarParado = 2f;
+    private int vidaMaxima;
+    private int vidaActual;
+    private int danyo;
 
-   
+    public Text txtVida;
 
-   
+
+
+
+    private void Awake() {
+        vidaMaxima = 10;
+        danyo = 1;
+        vidaActual = vidaMaxima;
+    }
+
+
 
 
     void Start() {
-        miAnimator = GetComponent<Animator>();
-        //Transform punyo;
+        
+        miAnimator = GetComponent<Animator>();      
         GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
+        txtVida.text = "Vida: " + vidaActual;
+
 
     }
     void Update() {
@@ -48,11 +63,20 @@ public class PlayerScript : MonoBehaviour {
 
         if (corriendo >= 0f) {
 
-            transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotar, 0);
+            transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
         }
     }
- 
-  
+
+    private void OnCollisionEnter(Collision collision) {
+        if(collision.gameObject.tag == "Enemigo") {
+
+            vidaActual = vidaActual- danyo;
+            txtVida.text = "Vida: " + vidaActual;
+
+        }
+    }
+
+
 
 
 
