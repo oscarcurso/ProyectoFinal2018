@@ -15,10 +15,10 @@ public class UIScript : MonoBehaviour {
 		
 	}
     public void BotonInicioNivel1() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void BotonInicioNivel2() {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
     public void BotonExit() {
