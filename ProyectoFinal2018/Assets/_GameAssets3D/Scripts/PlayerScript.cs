@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour {
     Animator miAnimator;
@@ -64,6 +65,9 @@ public class PlayerScript : MonoBehaviour {
         if (corriendo >= 0f) {
 
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
+        }
+        if (vidaActual <= 0) {
+            SceneManager.LoadScene(3);
         }
     }
 
