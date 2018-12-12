@@ -5,10 +5,10 @@ using UnityEngine;
 public class ArtilleriaScript : MonoBehaviour {
 
     private float speed = 200.0f;
-    [SerializeField] Rigidbody prefabProyectil;
+    [SerializeField] GameObject prefabProyectil;
     [SerializeField] Transform puntoGeneracion;
     //[SerializeField] Rigidbody proyectil;
-    int fuerza = 3;
+    public float fuerza = 100;
 
 
 
@@ -22,9 +22,9 @@ public class ArtilleriaScript : MonoBehaviour {
     void Update() {
 
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Instantiate(prefabProyectil, puntoGeneracion.up, Quaternion.identity);
-            prefabProyectil.AddRelativeForce(0, 0, fuerza);
+        if (Input.GetMouseButtonDown(0)) {
+           GameObject nuevoProyectil = Instantiate(prefabProyectil, puntoGeneracion.transform.position, puntoGeneracion.transform.rotation);
+            nuevoProyectil.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * fuerza);
         }
 
 
@@ -44,4 +44,5 @@ public class ArtilleriaScript : MonoBehaviour {
 
 
     }
+   
 }
