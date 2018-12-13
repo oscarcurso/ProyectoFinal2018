@@ -40,7 +40,7 @@ public class PunyoScript : MonoBehaviour
 
     void Start()
     {
-        //audioPunyo.GetComponentInChildren<AudioSource>();
+      
     }
 
 

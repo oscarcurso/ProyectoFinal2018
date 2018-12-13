@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 4539982548565582}
   - component: {fileID: 65082533231281304}
   - component: {fileID: 114582612150761626}
-  - component: {fileID: 82825538579021870}
+  - component: {fileID: 82791519782567962}
   m_Layer: 0
   m_Name: Puneteador
   m_TagString: Ostiador
@@ -2652,7 +2652,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898830271112212}
   m_Enabled: 1
---- !u!82 &82825538579021870
+--- !u!82 &82791519782567962
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2868,6 +2868,7 @@ MonoBehaviour:
   agenteChica3: {fileID: 0}
   txtvida: {fileID: 0}
   txtPuntos: {fileID: 0}
+  audioPunyo: {fileID: 82791519782567962}
 --- !u!135 &135343453535574784
 SphereCollider:
   m_ObjectHideFlags: 1
