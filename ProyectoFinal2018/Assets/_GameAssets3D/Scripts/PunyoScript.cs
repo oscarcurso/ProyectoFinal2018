@@ -31,7 +31,7 @@ public class PunyoScript : MonoBehaviour
     public Text txtvida;
     public Text txtPuntos;
     private int puntos = 0;
-    AudioSource audioPunyo;
+    public AudioSource audioPunyo;
 
 
 
@@ -40,7 +40,7 @@ public class PunyoScript : MonoBehaviour
 
     void Start()
     {
-        audioPunyo.GetComponentInChildren<AudioSource>();
+        //audioPunyo.GetComponentInChildren<AudioSource>();
     }
 
 

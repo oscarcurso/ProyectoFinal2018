@@ -31331,6 +31331,11 @@ Prefab:
       propertyPath: txtVida
       value: 
       objectReference: {fileID: 648132931}
+    - target: {fileID: 114582612150761626, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: audioPunyo
+      value: 
+      objectReference: {fileID: 1609596324}
     m_RemovedComponents:
     - {fileID: 82825538579021870, guid: db6591e28aae196488c8bade021d6219, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: db6591e28aae196488c8bade021d6219, type: 2}
