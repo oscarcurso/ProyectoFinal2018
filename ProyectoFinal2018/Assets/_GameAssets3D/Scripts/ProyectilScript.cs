@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ProyectilScript : MonoBehaviour {
+   
+    
+
 
     private void Start() {
         // AudioSource audioSource = new AudioSource();
@@ -20,7 +24,7 @@ public class ProyectilScript : MonoBehaviour {
 
            
             objetivoImpacto.GetComponent<Animator>().SetBool("ostiado", true);
-
+            
 
 
             

@@ -24,7 +24,7 @@ public class ArtilleriaScript : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0)) {
            GameObject nuevoProyectil = Instantiate(prefabProyectil, puntoGeneracion.transform.position, puntoGeneracion.transform.rotation);
-            nuevoProyectil.GetComponent<Rigidbody>().AddRelativeForce(Vector3.up * fuerza);
+            nuevoProyectil.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * fuerza);
         }
 
 

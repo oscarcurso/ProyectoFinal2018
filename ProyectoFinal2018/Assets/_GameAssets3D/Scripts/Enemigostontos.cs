@@ -38,22 +38,29 @@ public class Enemigostontos : MonoBehaviour {
 
     }
 
-   
-
-
-
-        /*if (collision.gameObject.name == "Player") {
-
-            collision.gameObject.GetComponent<PlayerScript>().RecibirDanyo(danyo);
-
-            Morir();
-
-        }*/
 
 
 
 
+    /*if (collision.gameObject.name == "Player") {
+
+        collision.gameObject.GetComponent<PlayerScript>().RecibirDanyo(danyo);
+
+        Morir();
+
+    }*/
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Proyectil")
+        {
+            transform.position = GetComponent<Collider>().transform.position;
+        }
     }
+
+
+
+
+}
 
    
 
