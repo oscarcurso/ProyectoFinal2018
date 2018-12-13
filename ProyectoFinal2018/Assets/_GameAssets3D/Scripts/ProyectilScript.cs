@@ -4,14 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class ProyectilScript : MonoBehaviour {
+
    
-    
 
 
     private void Start() {
         // AudioSource audioSource = new AudioSource();
         //audioSource.Play();
-
+        
 
         Invoke("Destroy", 5);
     }
@@ -24,6 +24,7 @@ public class ProyectilScript : MonoBehaviour {
 
            
             objetivoImpacto.GetComponent<Animator>().SetBool("ostiado", true);
+            
             
 
 

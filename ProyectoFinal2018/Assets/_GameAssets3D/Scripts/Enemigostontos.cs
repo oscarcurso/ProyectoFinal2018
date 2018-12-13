@@ -49,12 +49,9 @@ public class Enemigostontos : MonoBehaviour {
         Morir();
 
     }*/
-    private void OnTriggerEnter(Collider other)
+   public void Parar()
     {
-        if(other.gameObject.tag == "Proyectil")
-        {
-            transform.position = GetComponent<Collider>().transform.position;
-        }
+        CancelInvoke("RotarAleatoriamente");
     }
 
 
