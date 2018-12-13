@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ProyectilScript : MonoBehaviour {
 
+    [SerializeField] Text txtPuntos;
+    [SerializeField] Text txtVida;
    
 
 
@@ -19,19 +22,16 @@ public class ProyectilScript : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         GameObject objetivoImpacto = other.gameObject;
       
-        if (objetivoImpacto.CompareTag("Enemigo")) {
-            Debug.Log("Impacto  Enemigo");
+        if (objetivoImpacto.CompareTag("Enemigo"))
+        {
+            Debug.Log("Impacto Enemigo");
 
-           
+
             objetivoImpacto.GetComponent<Animator>().SetBool("ostiado", true);
             objetivoImpacto.GetComponent<Enemigostontos>().Destruir();
+          //  AumentarPuntos();
 
-
-
-
-
-
-        } 
+        }
         Destroy(this.gameObject);
 
 
@@ -42,8 +42,13 @@ public class ProyectilScript : MonoBehaviour {
         }
     }
 
+    public void AumentarPuntos(int punto)
+    {
+        punto = 1;
+        txtPuntos.text = "Puntos: " + punto;
+    }
 
 
-   
+
 
 }

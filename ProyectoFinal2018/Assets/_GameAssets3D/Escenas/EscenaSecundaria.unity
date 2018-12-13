@@ -214,6 +214,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
+  scriptProyectil: {fileID: 114603701166450680, guid: 11fcce809e71f6c42995a6dec028567d,
+    type: 2}
 --- !u!136 &166508739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -240,7 +242,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1001 &231136397
 Prefab:
@@ -318,6 +320,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
+  scriptProyectil: {fileID: 114603701166450680, guid: 11fcce809e71f6c42995a6dec028567d,
+    type: 2}
 --- !u!136 &231136400
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -450,6 +454,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
+  scriptProyectil: {fileID: 114603701166450680, guid: 11fcce809e71f6c42995a6dec028567d,
+    type: 2}
 --- !u!1 &523325874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1335,7 +1341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1534694137
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2988,6 +2994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
+  scriptProyectil: {fileID: 114603701166450680, guid: 11fcce809e71f6c42995a6dec028567d,
+    type: 2}
 --- !u!54 &1765211332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3001,7 +3009,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &1765211333
 CapsuleCollider:
@@ -3088,6 +3096,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
+  scriptProyectil: {fileID: 114603701166450680, guid: 11fcce809e71f6c42995a6dec028567d,
+    type: 2}
 --- !u!136 &1799059196
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3219,7 +3229,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1885997774
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3396,7 +3406,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!64 &2100903686
 MeshCollider:

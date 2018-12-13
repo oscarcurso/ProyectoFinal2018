@@ -6,6 +6,7 @@ public class Enemigostontos : MonoBehaviour {
 
     [SerializeField]  int tiempoEntreRotacion = 2;
     [SerializeField] int inicioRotacion = 1;
+    [SerializeField] ProyectilScript scriptProyectil;
    
 
 
@@ -13,6 +14,7 @@ public class Enemigostontos : MonoBehaviour {
 
  
     void Start() {
+        //scriptProyectil.GetComponent<ProyectilScript>();
         
         InvokeRepeating("RotarAleatoriamente", inicioRotacion, tiempoEntreRotacion);
 
@@ -52,7 +54,13 @@ public class Enemigostontos : MonoBehaviour {
         Destroy(this);
     }
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Proyectil")
+        {
+            scriptProyectil.AumentarPuntos(1);
+        }
+    }
 
 
 }
