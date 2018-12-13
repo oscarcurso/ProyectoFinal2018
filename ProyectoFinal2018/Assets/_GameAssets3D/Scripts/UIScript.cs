@@ -24,4 +24,9 @@ public class UIScript : MonoBehaviour {
     public void BotonExit() {
         Application.Quit();
     }
+
+    public void Fincamara()
+    {
+        SceneManager.LoadScene(5);
+    }
 }
