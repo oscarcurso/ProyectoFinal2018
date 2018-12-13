@@ -24,13 +24,13 @@ public class Enemigostontos : MonoBehaviour {
         
 
     }
-    protected void RotarAleatoriamente() {
+    public void RotarAleatoriamente() {
         float rotacion = Random.Range(0f, 360f);
 
         transform.eulerAngles = new Vector3(0, rotacion, 0);
     }
 
-    protected void Avanzar() {
+    public void Avanzar() {
 
         int speed = 1;
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
@@ -42,16 +42,14 @@ public class Enemigostontos : MonoBehaviour {
 
 
 
-    /*if (collision.gameObject.name == "Player") {
-
-        collision.gameObject.GetComponent<PlayerScript>().RecibirDanyo(danyo);
-
-        Morir();
-
-    }*/
    public void Parar()
     {
         CancelInvoke("RotarAleatoriamente");
+        CancelInvoke("Avanzar");
+    }
+    public void Destruir()
+    {
+        Destroy(this);
     }
 
 

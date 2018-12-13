@@ -24,11 +24,13 @@ public class ProyectilScript : MonoBehaviour {
 
            
             objetivoImpacto.GetComponent<Animator>().SetBool("ostiado", true);
-            
-            
+            objetivoImpacto.GetComponent<Enemigostontos>().Destruir();
 
 
-            
+
+
+
+
         } 
         Destroy(this.gameObject);
 
