@@ -1434,7 +1434,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1719429326303630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.24, y: -0.74, z: -33.03}
+  m_LocalPosition: {x: -46.74, y: -2.449, z: -30.193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4841865136953092}
@@ -2643,8 +2643,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25402728, y: 0.09827082, z: 0.12248431}
-  m_Center: {x: 0.11423007, y: -0.007463216, z: 0.008469052}
+  m_Size: {x: 0.1281377, y: 0.035623427, z: 0.07237403}
+  m_Center: {x: 0.15695964, y: -0.038787562, z: 0.05949387}
 --- !u!81 &81153647072403346
 AudioListener:
   m_ObjectHideFlags: 1
@@ -2808,7 +2808,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898830271112212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
   m_Name: 
@@ -2833,7 +2833,7 @@ MonoBehaviour:
   speedAndar: 10
   speedCorrer: 10
   speedRotar: 4
-  speedRotarParado: 2
+  speedRotarParado: 3
   txtVida: {fileID: 0}
 --- !u!114 &114582612150761626
 MonoBehaviour:
@@ -2890,10 +2890,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.28317496
+  m_Radius: 0.2983208
   m_Height: 1.9273889
   m_Direction: 1
-  m_Center: {x: -0.025327297, y: 0.97670823, z: -0.062975824}
+  m_Center: {x: -0.010181457, y: 0.9767083, z: -0.062975824}
 --- !u!137 &137171881454798488
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

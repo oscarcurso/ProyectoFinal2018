@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArtilleriaScript : MonoBehaviour {
 
@@ -9,13 +10,15 @@ public class ArtilleriaScript : MonoBehaviour {
     [SerializeField] Transform puntoGeneracion;
     //[SerializeField] Rigidbody proyectil;
     public float fuerza = 100;
+    public AudioSource audioCanyon;
+  
 
 
 
 
     // Use this for initialization
     void Start() {
-
+        
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class ArtilleriaScript : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
            GameObject nuevoProyectil = Instantiate(prefabProyectil, puntoGeneracion.transform.position, puntoGeneracion.transform.rotation);
             nuevoProyectil.GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * fuerza);
+            audioCanyon.Play();
         }
 
 

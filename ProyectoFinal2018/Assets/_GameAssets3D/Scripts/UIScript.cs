@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIScript : MonoBehaviour {
+    [SerializeField] GameObject boton2;
 
 	// Use this for initialization
 	void Start () {
-		
+        boton2.SetActive(false);
 	}
 	
 	// Update is called once per frame

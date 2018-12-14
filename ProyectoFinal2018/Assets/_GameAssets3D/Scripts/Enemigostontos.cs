@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemigostontos : MonoBehaviour {
 
@@ -10,11 +11,12 @@ public class Enemigostontos : MonoBehaviour {
    
 
 
-  
 
- 
+
+
+
     void Start() {
-        //scriptProyectil.GetComponent<ProyectilScript>();
+       
         
         InvokeRepeating("RotarAleatoriamente", inicioRotacion, tiempoEntreRotacion);
 
@@ -23,6 +25,7 @@ public class Enemigostontos : MonoBehaviour {
      void Update() {
 
         Avanzar();
+       
         
 
     }
@@ -44,23 +47,16 @@ public class Enemigostontos : MonoBehaviour {
 
 
 
-   public void Parar()
-    {
-        CancelInvoke("RotarAleatoriamente");
-        CancelInvoke("Avanzar");
-    }
+  
     public void Destruir()
     {
         Destroy(this);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Proyectil")
-        {
-            scriptProyectil.AumentarPuntos(1);
-        }
-    }
+   /*public void SumarPuntos() {
+
+        txtPuntos.text = "Puntos: " + puntos + 1;
+    }*/
 
 
 }

@@ -77,6 +77,13 @@ public class PunyoScript : MonoBehaviour
 
         }
 
+        if (collider.gameObject.name == "Elvis4") {
+            audioPunyo.Play();
+            txtPuntos.text = "Puntos: " + puntos++;
+            elvisAnimator3.SetBool("ostiado", true);
+            agenteElvis3.isStopped = true;
+
+        }
 
         if (collider.gameObject.name == "Abuela1")
         {
