@@ -7,13 +7,19 @@ public class GameControllerPPref : MonoBehaviour {
     private const string XPOS = "xPos";
     private const string YPOS = "yPos";
     private const string ZPOS = "zPos";
+    private const string PUNTOS = "puntos";
 
     public static void StorePosition(Vector3 position) {
 
         PlayerPrefs.SetFloat(XPOS, position.x);
         PlayerPrefs.SetFloat(YPOS, position.y);
         PlayerPrefs.SetFloat(ZPOS, position.z);
+       
 
+    }
+
+    public static void StorePuntos(int puntos) {
+        PlayerPrefs.SetInt(PUNTOS, puntos);
     }
 
     public static Vector3 GetPosition() {
@@ -31,5 +37,15 @@ public class GameControllerPPref : MonoBehaviour {
         }
         return position;
 
+    }
+
+
+    public static int GetPuntos() {
+        int puntuacion = 0;
+        if (PlayerPrefs.HasKey(PUNTOS)){
+            puntuacion = PlayerPrefs.GetInt(PUNTOS);
+        }
+
+        return puntuacion;
     }
 }
