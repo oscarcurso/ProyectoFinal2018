@@ -91,6 +91,16 @@ public class ChicaScript : MonoBehaviour {
         estado = Estado.Andando;
 
     }
+    void Destruccion()
+    {
+        Destroy(this.gameObject);
+    }
+    void DestruirPersonaje()
+    {
+        Invoke("Destruccion", 1);
+    }
+
+   
 
 
 }

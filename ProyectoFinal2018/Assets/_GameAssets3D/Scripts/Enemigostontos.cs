@@ -7,8 +7,8 @@ public class Enemigostontos : MonoBehaviour {
 
     [SerializeField]  int tiempoEntreRotacion = 2;
     [SerializeField] int inicioRotacion = 1;
-    [SerializeField] ProyectilScript scriptProyectil;
-   
+    [SerializeField] Text txtPuntuacion;
+    int puntos = 0;
 
 
 
@@ -43,21 +43,50 @@ public class Enemigostontos : MonoBehaviour {
 
     }
 
-
-
-
-
-  
     public void Destruir()
     {
         Destroy(this);
     }
 
-   /*public void SumarPuntos() {
+  
+  
 
-        txtPuntos.text = "Puntos: " + puntos + 1;
-    }*/
+    private void OnCollisionEnter(Collision other)
+    {
+        GameObject objetivoImpacto = other.gameObject;
 
+        if (objetivoImpacto.CompareTag("Proyectil"))
+        {
+            Debug.Log("Impacto Proyectil");
+
+
+
+
+
+
+            GetComponent<Animator>().SetBool("ostiado", true);
+            txtPuntuacion.text = "Puntuacion: " + puntos + 1;
+            
+
+
+
+
+
+
+
+
+        }
+
+      
+    }
+    void Destruccion()
+    {
+        Destroy(this.gameObject);
+    }
+    void DestruirPersonaje()
+    {
+        Invoke("Destruccion", 1);
+    }
 
 }
 

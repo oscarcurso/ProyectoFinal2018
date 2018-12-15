@@ -8,7 +8,7 @@ public class ProyectilScript : MonoBehaviour {
 
     [SerializeField] Text txtPuntos;
     [SerializeField] Text txtVida;
-  
+    Enemigostontos scriptEnemigo;
     int puntos = 0;
 
 
@@ -21,42 +21,35 @@ public class ProyectilScript : MonoBehaviour {
         Invoke("Destroy", 5);
     }
 
-    private void OnTriggerEnter(Collider other) {
+    private void OnCollisionEnter(Collision other)
+    {
         GameObject objetivoImpacto = other.gameObject;
 
-        if (objetivoImpacto.CompareTag("Enemigo")) {
-            Debug.Log("Impacto Enemigo");
-
-
-            objetivoImpacto.GetComponent<Animator>().SetBool("ostiado", true);
-            
-            objetivoImpacto.GetComponent<Enemigostontos>().Destruir();
-
-
-
-
-
-
-
-
-        }
-
-        Destroy(this.gameObject);
-
-
-
-        if (objetivoImpacto.CompareTag("Terrain")) {
+        if (objetivoImpacto.CompareTag("Terrain"))
+        {
 
 
             Destroy(this.gameObject);
         }
+        Destroy(this.gameObject);
+
+
+
+
+
+
+    }
+
+      
+
+
+
+        
     }
 
 
-    private void OnDestroy() {
-       
-    }
 
 
 
-}
+
+
