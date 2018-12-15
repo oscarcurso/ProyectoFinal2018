@@ -58,8 +58,10 @@ public class PlayerScript : MonoBehaviour {
         }
         if (Input.GetMouseButtonDown(0)) {
             miAnimator.SetTrigger("ostiando");
-
-
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            miAnimator.SetTrigger("saltando");
         }
 
 
@@ -68,6 +70,8 @@ public class PlayerScript : MonoBehaviour {
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
         }
         if (vidaActual <= 0) {
+           
+            
             SceneManager.LoadScene(4);
         }
     }
