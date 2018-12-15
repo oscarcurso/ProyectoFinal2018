@@ -12,19 +12,22 @@ public class Enemigostontos : MonoBehaviour {
     public Camera camaraPpal;
     public Camera camaraSec;
     int puntos;
+    public AudioSource audioPrimero;
+    public AudioSource audioDespedida;
 
 
 
     private void Awake()
     {
-        camaraSec.enabled = false;
+        //audioDespedida.GetComponent<AudioSource>();
+        camaraSec.gameObject.SetActive(false);
         puntos = 0;
     }
 
 
     void Start() {
-
         
+        audioDespedida.Play();
         InvokeRepeating("RotarAleatoriamente", inicioRotacion, tiempoEntreRotacion);
 
     }
@@ -32,9 +35,13 @@ public class Enemigostontos : MonoBehaviour {
      void Update() {
         if (puntos >= 5)
         {
-            //SceneManager.LoadScene(3);
-            camaraPpal.enabled = false;
-            camaraSec.enabled = true;
+           //audioPrimero.Stop();
+            audioDespedida.Play();
+            camaraPpal.gameObject.SetActive(false);
+            camaraSec.gameObject.SetActive(true);
+            
+            
+            
 
         }
 
@@ -62,8 +69,7 @@ public class Enemigostontos : MonoBehaviour {
         Destroy(this);
     }
 
-  
-  
+
 
     private void OnCollisionEnter(Collision other)
     {
@@ -97,14 +103,10 @@ public class Enemigostontos : MonoBehaviour {
     }
     void Destruccion()
     {
-       // GetComponent<Rigidbody>().isKinematic = true;
-        GetComponent<Rigidbody>().AddRelativeForce(0, 1000, 1000);
+       
+        GetComponent<Rigidbody>().AddRelativeForce(0, 1000, 2000);
     }
-    void DestruirPersonaje()
-        
-    {
-        Invoke("Destruccion", 0.1f);
-    }
+   
     
 }
 

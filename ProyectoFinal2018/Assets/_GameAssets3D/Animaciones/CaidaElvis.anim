@@ -123244,7 +123244,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 4.1
-    functionName: DestruirPersonaje
+    functionName: Destruccion
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
