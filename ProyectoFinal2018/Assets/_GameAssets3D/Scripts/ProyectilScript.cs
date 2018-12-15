@@ -18,7 +18,7 @@ public class ProyectilScript : MonoBehaviour {
 
 
 
-        Invoke("Destroy", 5);
+       
     }
 
     private void OnCollisionEnter(Collision other)

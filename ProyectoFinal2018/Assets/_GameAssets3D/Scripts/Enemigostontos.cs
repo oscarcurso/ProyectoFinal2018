@@ -2,31 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Enemigostontos : MonoBehaviour {
 
     [SerializeField]  int tiempoEntreRotacion = 2;
     [SerializeField] int inicioRotacion = 1;
     [SerializeField] Text txtPuntuacion;
-    int puntos = 0;
+    public Camera camaraPpal;
+    public Camera camaraSec;
+    int puntos;
 
 
 
-
+    private void Awake()
+    {
+        camaraSec.enabled = false;
+        puntos = 0;
+    }
 
 
     void Start() {
-       
+
         
         InvokeRepeating("RotarAleatoriamente", inicioRotacion, tiempoEntreRotacion);
 
     }
 
      void Update() {
+        if (puntos >= 5)
+        {
+            //SceneManager.LoadScene(3);
+            camaraPpal.enabled = false;
+            camaraSec.enabled = true;
+
+        }
 
         Avanzar();
        
-        
+       
 
     }
     public void RotarAleatoriamente() {
@@ -65,7 +79,9 @@ public class Enemigostontos : MonoBehaviour {
 
 
             GetComponent<Animator>().SetBool("ostiado", true);
-            txtPuntuacion.text = "Puntuacion: " + puntos + 1;
+            puntos = puntos + 1;
+            txtPuntuacion.text = "Puntuacion: " + puntos;
+            print("cogiendo puntos");
             
 
 
@@ -81,13 +97,15 @@ public class Enemigostontos : MonoBehaviour {
     }
     void Destruccion()
     {
-        Destroy(this.gameObject);
+       // GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<Rigidbody>().AddRelativeForce(0, 1000, 1000);
     }
     void DestruirPersonaje()
+        
     {
-        Invoke("Destruccion", 1);
+        Invoke("Destruccion", 0.1f);
     }
-
+    
 }
 
    
