@@ -5,8 +5,7 @@ using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class ElvisScript : MonoBehaviour {
-    public Text textVida;
-    public Text textPuntos;
+    
   
     Animator miAnimator;
     public GameObject player;

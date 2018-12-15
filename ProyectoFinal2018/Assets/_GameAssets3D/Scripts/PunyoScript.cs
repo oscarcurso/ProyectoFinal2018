@@ -13,6 +13,8 @@ public class PunyoScript : MonoBehaviour
     public NavMeshAgent agenteElvis2;
     public Animator elvisAnimator3;
     public NavMeshAgent agenteElvis3;
+    public Animator elvisAnimator4;
+    public NavMeshAgent agenteElvis4;
     public Animator abuelaAnimator1;
     public NavMeshAgent agenteAbuela1;
     public Animator abuelaAnimator2;
@@ -80,8 +82,8 @@ public class PunyoScript : MonoBehaviour
         if (collider.gameObject.name == "Elvis4") {
             audioPunyo.Play();
             txtPuntos.text = "Puntos: " + puntos++;
-            elvisAnimator3.SetBool("ostiado", true);
-            agenteElvis3.isStopped = true;
+            elvisAnimator4.SetBool("ostiado", true);
+            agenteElvis4.isStopped = true;
 
         }
 

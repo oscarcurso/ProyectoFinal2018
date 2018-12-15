@@ -18568,7 +18568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 94.99, y: -24.3}
+  m_AnchoredPosition: {x: 94.98999, y: -24.300049}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &648132931
@@ -32795,6 +32795,16 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 114582612150761626, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: elvisAnimator4
+      value: 
+      objectReference: {fileID: 1846119224}
+    - target: {fileID: 114582612150761626, guid: db6591e28aae196488c8bade021d6219,
+        type: 2}
+      propertyPath: agenteElvis4
+      value: 
+      objectReference: {fileID: 1846119223}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db6591e28aae196488c8bade021d6219, type: 2}
   m_IsPrefabAsset: 0
@@ -51004,6 +51014,16 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ef8ff0156a05be4da07eedcebd4c275, type: 2}
   m_IsPrefabAsset: 0
+--- !u!195 &1846119223 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 195265837261611082, guid: 5ef8ff0156a05be4da07eedcebd4c275,
+    type: 2}
+  m_PrefabInternal: {fileID: 1846119222}
+--- !u!95 &1846119224 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95815394514136294, guid: 5ef8ff0156a05be4da07eedcebd4c275,
+    type: 2}
+  m_PrefabInternal: {fileID: 1846119222}
 --- !u!1001 &1846935333
 Prefab:
   m_ObjectHideFlags: 0

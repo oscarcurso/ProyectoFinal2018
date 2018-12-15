@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIScript : MonoBehaviour {
-    [SerializeField] Text boton2;
+    [SerializeField] Text txtPuntuacion;
+    [SerializeField] GameObject btnEscena2;
 
 	// Use this for initialization
 	void Start () {
-        boton2.gameObject.SetActive(false);
+       btnEscena2.gameObject.SetActive(false);
         int puntos= GameControllerPPref.GetPuntos();
-        boton2.text = "Maximo Puntuacion: " + puntos; 
+        txtPuntuacion.text = "Maxima Puntuacion: " + puntos; 
 	}
 	
 	// Update is called once per frame
