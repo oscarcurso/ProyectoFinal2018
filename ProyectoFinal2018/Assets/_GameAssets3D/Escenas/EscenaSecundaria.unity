@@ -243,10 +243,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
-  txtPuntuacion: {fileID: 1728593530}
   camaraPpal: {fileID: 1534694138}
   camaraSec: {fileID: 1885997775}
   audioPrimero: {fileID: 523325879}
+  txtVidas: {fileID: 1097638406}
+  txtPuntos: {fileID: 1728593530}
 --- !u!136 &166508739
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -367,10 +368,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
-  txtPuntuacion: {fileID: 1728593530}
   camaraPpal: {fileID: 1534694138}
   camaraSec: {fileID: 1885997775}
   audioPrimero: {fileID: 523325879}
+  txtVidas: {fileID: 1097638406}
+  txtPuntos: {fileID: 1728593530}
 --- !u!136 &231136400
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -531,10 +533,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
-  txtPuntuacion: {fileID: 1728593530}
   camaraPpal: {fileID: 1534694138}
   camaraSec: {fileID: 1885997775}
   audioPrimero: {fileID: 523325879}
+  txtVidas: {fileID: 1097638406}
+  txtPuntos: {fileID: 1728593530}
 --- !u!1 &523325874
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,10 +3413,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
-  txtPuntuacion: {fileID: 1728593530}
   camaraPpal: {fileID: 1534694138}
   camaraSec: {fileID: 1885997775}
   audioPrimero: {fileID: 523325879}
+  txtVidas: {fileID: 1097638406}
+  txtPuntos: {fileID: 1728593530}
 --- !u!54 &1765211332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3514,10 +3518,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoEntreRotacion: 2
   inicioRotacion: 1
-  txtPuntuacion: {fileID: 1728593530}
   camaraPpal: {fileID: 1534694138}
   camaraSec: {fileID: 1885997775}
-  audioPrimero: {fileID: 8300000, guid: 5f4739480f775fc4e8f2790dcc4da94b, type: 3}
+  audioPrimero: {fileID: 523325879}
+  txtVidas: {fileID: 1097638406}
+  txtPuntos: {fileID: 1728593530}
 --- !u!136 &1799059196
 CapsuleCollider:
   m_ObjectHideFlags: 0

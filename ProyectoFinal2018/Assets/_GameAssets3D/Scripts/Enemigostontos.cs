@@ -8,12 +8,17 @@ public class Enemigostontos : MonoBehaviour {
 
     [SerializeField]  int tiempoEntreRotacion = 2;
     [SerializeField] int inicioRotacion = 1;
-    [SerializeField] Text txtPuntuacion;
+    
     public Camera camaraPpal;
     public Camera camaraSec;
     int puntos;
     public AudioSource audioPrimero;
-   
+
+    [SerializeField] Text txtVidas;
+    [SerializeField] Text txtPuntos;
+    int puntosAlmacenados;
+    int vidasAlmacenadas;
+
 
 
 
@@ -21,7 +26,13 @@ public class Enemigostontos : MonoBehaviour {
     {
         //audioDespedida.GetComponent<AudioSource>();
         camaraSec.gameObject.SetActive(false);
-        puntos = 0;
+       
+        
+            puntosAlmacenados = GameControllerPPref.GetPuntos();
+            vidasAlmacenadas = GameControllerPPref.GetVidas();
+            txtPuntos.text = "Puntos: " + puntosAlmacenados;
+            txtVidas.text = "Vidas: " + vidasAlmacenadas;
+        
     }
 
 
@@ -86,7 +97,7 @@ public class Enemigostontos : MonoBehaviour {
 
             GetComponent<Animator>().SetBool("ostiado", true);
             puntos = puntos + 1;
-            txtPuntuacion.text = "Puntuacion: " + puntos;
+           // txtPuntuacion.text = "Puntuacion: " + puntos;
             print("cogiendo puntos");
             
 
