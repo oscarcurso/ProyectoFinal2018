@@ -31,7 +31,7 @@ public class UIScript : MonoBehaviour {
        
         
         int puntos= GameControllerPPref.GetPuntos();
-        txtMaxPuntuacion.text = "Maxima Puntuacion: " + maxPunt; 
+        txtMaxPuntuacion.text = "Máxima Puntuacion: " + maxPunt; 
 	}
 	
 	// Update is called once per frame
@@ -55,6 +55,7 @@ public class UIScript : MonoBehaviour {
 
     public void Fincamara()
     {
+        
         SceneManager.LoadScene(5);
     }
 
