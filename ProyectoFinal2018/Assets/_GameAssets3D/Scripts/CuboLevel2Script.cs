@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class CuboLevel2Script : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+  
+
+  
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -18,7 +23,7 @@ public class CuboLevel2Script : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         
        if(other.gameObject.tag == "Player") {
-           // GameControllerPPref.S
+         
             SceneManager.LoadScene(3);
 
         }

@@ -8,6 +8,7 @@ public class UIScript : MonoBehaviour {
     [SerializeField] Text txtMaxPuntuacion;
     [SerializeField] GameObject btnEscena2;
     int maxPunt;
+    
 
 
     private void Awake()

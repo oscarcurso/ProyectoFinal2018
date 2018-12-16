@@ -12,6 +12,7 @@ public class Enemigostontos : MonoBehaviour {
     public Camera camaraPpal;
     public Camera camaraSec;
     int puntos;
+    int vidas;
     public AudioSource audioPrimero;
 
     [SerializeField] Text txtVidas;
@@ -24,14 +25,16 @@ public class Enemigostontos : MonoBehaviour {
 
     private void Awake()
     {
-        //audioDespedida.GetComponent<AudioSource>();
+        
         camaraSec.gameObject.SetActive(false);
        
         
             puntosAlmacenados = GameControllerPPref.GetPuntos();
             vidasAlmacenadas = GameControllerPPref.GetVidas();
-            txtPuntos.text = "Puntos: " + puntosAlmacenados;
-            txtVidas.text = "Vidas: " + vidasAlmacenadas;
+            vidas = vidasAlmacenadas;
+            puntos = puntosAlmacenados;
+            txtPuntos.text = "Puntos: " + puntos;
+            txtVidas.text = "Vidas: " + vidas;
         
     }
 
@@ -84,20 +87,20 @@ public class Enemigostontos : MonoBehaviour {
 
     private void OnCollisionEnter(Collision other)
     {
-        GameObject objetivoImpacto = other.gameObject;
+        
 
-        if (objetivoImpacto.CompareTag("Proyectil"))
+        if (other.gameObject.CompareTag("Proyectil"))
         {
             Debug.Log("Impacto Proyectil");
 
 
 
-
+            puntos = puntos + 1;
+            txtPuntos.text = "Puntuacion: " + puntos;
 
 
             GetComponent<Animator>().SetBool("ostiado", true);
-            puntos = puntos + 1;
-           // txtPuntuacion.text = "Puntuacion: " + puntos;
+           
             print("cogiendo puntos");
             
 
