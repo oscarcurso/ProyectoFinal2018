@@ -1263,7 +1263,6 @@ GameObject:
   - component: {fileID: 4535455872933312}
   - component: {fileID: 20423025695826284}
   - component: {fileID: 81153647072403346}
-  - component: {fileID: 114252060069851598}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2802,23 +2801,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114252060069851598
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1898830271112212}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cadd54e4832aeef4b9359f44cbe335cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationRange: {x: 120, y: 120}
-  rotationSpeed: 2
-  dampingTime: 0.38
-  autoZeroVerticalOnMobile: 1
-  autoZeroHorizontalOnMobile: 0
-  relative: 1
 --- !u!114 &114460580494761572
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2852,6 +2834,8 @@ MonoBehaviour:
   agenteElvis2: {fileID: 0}
   elvisAnimator3: {fileID: 0}
   agenteElvis3: {fileID: 0}
+  elvisAnimator4: {fileID: 0}
+  agenteElvis4: {fileID: 0}
   abuelaAnimator1: {fileID: 0}
   agenteAbuela1: {fileID: 0}
   abuelaAnimator2: {fileID: 0}

@@ -14,7 +14,7 @@ public class ElvisScript : MonoBehaviour {
     enum Estado { Andando, Siguiendo, Ostiado };
     Estado estado = Estado.Andando;
 
-    float anguloVision = 35;
+    float anguloVision = 50;
     float distanciaVision = 7;
 
 
