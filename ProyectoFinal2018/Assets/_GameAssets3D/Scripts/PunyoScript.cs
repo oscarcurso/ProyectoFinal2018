@@ -34,19 +34,22 @@ public class PunyoScript : MonoBehaviour
     public Text txtPuntos;
     private int puntos = 0;
     public AudioSource audioPunyo;
-    int puntuacionAlmacenada = GameControllerPPref.GetPuntos();
-    int puntuacionActual; 
+    int puntuacionAlmacenada;
+    int puntuacionActual;
 
 
-
+    private void Awake()
+    {
+        puntuacionAlmacenada = GameControllerPPref.GetPuntos();
+    }
 
     void Start()
     {
         puntuacionActual = puntuacionAlmacenada;
 
-        if (puntuacionAlmacenada != 0)
+        if (puntuacionActual != 0)
         {
-            txtPuntos.text = "Puntuación: " + puntuacionAlmacenada;
+            txtPuntos.text = "Puntuación: " + puntuacionActual;
             
         }
         else
