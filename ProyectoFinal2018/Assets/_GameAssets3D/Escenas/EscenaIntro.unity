@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 018fe4a2cd2fe174a94f9fda8119fb15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtMaxPuntuacion: {fileID: 0}
+  txtMaxPuntuacion: {fileID: 1212470306}
   btnEscena2: {fileID: 1056435208}
 --- !u!82 &1321153853
 AudioSource:

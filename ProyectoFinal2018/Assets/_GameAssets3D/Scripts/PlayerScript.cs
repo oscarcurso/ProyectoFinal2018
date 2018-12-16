@@ -103,7 +103,7 @@ public class PlayerScript : MonoBehaviour
             vidaActual = vidaActual - danyo;
             txtVida.text = "Vida: " + vidaActual;
             GameControllerPPref.StoreVidas(vidaActual);
-            GetComponent<Rigidbody>().AddRelativeForce(0, 0, 5);
+            GetComponent<Rigidbody>().AddRelativeForce(0, 0, 50);
 
         }
     }
