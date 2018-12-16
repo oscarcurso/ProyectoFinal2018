@@ -13,7 +13,7 @@ public class Enemigostontos : MonoBehaviour {
     public Camera camaraSec;
     int puntos;
     public AudioSource audioPrimero;
-    public AudioSource audioDespedida;
+   
 
 
 
@@ -27,7 +27,7 @@ public class Enemigostontos : MonoBehaviour {
 
     void Start() {
         
-        audioDespedida.Play();
+        
         InvokeRepeating("RotarAleatoriamente", inicioRotacion, tiempoEntreRotacion);
 
     }
@@ -35,8 +35,8 @@ public class Enemigostontos : MonoBehaviour {
      void Update() {
         if (puntos >= 5)
         {
-           //audioPrimero.Stop();
-            audioDespedida.Play();
+            audioPrimero.Stop();
+           
             camaraPpal.gameObject.SetActive(false);
             camaraSec.gameObject.SetActive(true);
             
