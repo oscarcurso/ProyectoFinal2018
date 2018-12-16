@@ -14,13 +14,22 @@ public class UIScript : MonoBehaviour {
     private void Awake()
     {
         maxPunt = GameControllerPPref.GetPuntos();
+
+        if (maxPunt != 0)
+        {
+            btnEscena2.gameObject.SetActive(false);
+        }
+        else
+        {
+            btnEscena2.gameObject.SetActive(true);
+        }
     }
 
 
     // Use this for initialization
     void Start () {
-
-        btnEscena2.gameObject.SetActive(false);
+       
+        
         int puntos= GameControllerPPref.GetPuntos();
         txtMaxPuntuacion.text = "Maxima Puntuacion: " + maxPunt; 
 	}
