@@ -18,6 +18,7 @@ public class CuboLevel2Script : MonoBehaviour {
     private void OnTriggerEnter(Collider other) {
         
        if(other.gameObject.tag == "Player") {
+           // GameControllerPPref.S
             SceneManager.LoadScene(3);
 
         }

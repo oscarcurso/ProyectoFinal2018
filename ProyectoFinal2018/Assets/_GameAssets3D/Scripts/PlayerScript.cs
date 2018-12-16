@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class PlayerScript : MonoBehaviour {
+public class PlayerScript : MonoBehaviour
+{
     Animator miAnimator;
     float corriendo = 0.10f;
     public float speedAndar = 2f;
@@ -16,47 +17,63 @@ public class PlayerScript : MonoBehaviour {
     private int danyo;
 
     public Text txtVida;
-   
 
 
 
 
-    private void Awake() {
+
+    private void Awake()
+    {
         vidaMaxima = 10;
         danyo = 1;
         vidaActual = vidaMaxima;
+
     }
 
 
 
 
-    void Start() {
-        
-        miAnimator = GetComponent<Animator>();      
+    void Start()
+    {
+        int vidasGuardadas = GameControllerPPref.GetVidas();
+        miAnimator = GetComponent<Animator>();
         GetComponentInChildren<Transform>().gameObject.name = "Puneteador";
-        txtVida.text = "Vida: " + vidaActual;
-
+        if (vidasGuardadas != 0)
+        {
+            txtVida.text = "Vidas: " + vidasGuardadas;
+        }
+        else
+        {
+            txtVida.text = "Vida: " + vidaActual;
+        }
 
     }
-    void Update() {
-        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space)) {
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.Space))
+        {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo - 0.01f;
             corriendo = Mathf.Max(0.11f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
-        } else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Space)) {
+        }
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.Space))
+        {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo + 0.01f;
             corriendo = Mathf.Min(1, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
-        } else if (!Input.GetKey(KeyCode.W)) {
+        }
+        else if (!Input.GetKey(KeyCode.W))
+        {
             miAnimator.ResetTrigger("ostiando");
             corriendo = corriendo - 0.01f;
             corriendo = Mathf.Max(0f, corriendo);
             miAnimator.SetFloat("corriendo", corriendo);
 
         }
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0))
+        {
             miAnimator.SetTrigger("ostiando");
         }
         if (Input.GetMouseButtonDown(1))
@@ -65,22 +82,28 @@ public class PlayerScript : MonoBehaviour {
         }
 
 
-        if (corriendo >= 0f) {
+        if (corriendo >= 0f)
+        {
 
             transform.Rotate(0, Input.GetAxis("Horizontal") * speedRotarParado, 0);
         }
-        if (vidaActual <= 0) {
-           
-            
+        if (vidaActual <= 0)
+        {
+
+
             SceneManager.LoadScene(4);
         }
     }
 
-    private void OnCollisionEnter(Collision collision) {
-        if(collision.gameObject.tag == "Enemigo") {
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Enemigo")
+        {
 
-            vidaActual = vidaActual- danyo;
+            vidaActual = vidaActual - danyo;
             txtVida.text = "Vida: " + vidaActual;
+            GameControllerPPref.StoreVidas(vidaActual);
+            GetComponent<Rigidbody>().AddRelativeForce(0, 0, 5);
 
         }
     }

@@ -34,15 +34,27 @@ public class PunyoScript : MonoBehaviour
     public Text txtPuntos;
     private int puntos = 0;
     public AudioSource audioPunyo;
-
-
+    int puntuacionAlmacenada = GameControllerPPref.GetPuntos();
+    int puntuacionActual; 
 
 
 
 
     void Start()
     {
-      
+        puntuacionActual = puntuacionAlmacenada;
+
+        if (puntuacionAlmacenada != 0)
+        {
+            txtPuntos.text = "Puntuación: " + puntuacionAlmacenada;
+            
+        }
+        else
+        {
+            txtPuntos.text = "Puntuación: " + puntos;
+            
+        }
+        
     }
 
 
@@ -57,90 +69,101 @@ public class PunyoScript : MonoBehaviour
         if (collider.gameObject.name == "Elvis1")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             elvisAnimator1.SetBool("ostiado", true);
             agenteElvis1.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Elvis2")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             elvisAnimator2.SetBool("ostiado", true);
             agenteElvis2.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Elvis3")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             elvisAnimator3.SetBool("ostiado", true);
             agenteElvis3.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
 
         if (collider.gameObject.name == "Elvis4") {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             elvisAnimator4.SetBool("ostiado", true);
             agenteElvis4.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
 
         if (collider.gameObject.name == "Abuela1")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             abuelaAnimator1.SetBool("ostiado", true);
             agenteAbuela1.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Abuela2")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             abuelaAnimator2.SetBool("ostiado", true);
             agenteAbuela2.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Abuela3")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             abuelaAnimator3.SetBool("ostiado", true);
             agenteAbuela3.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Abuela4")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             abuelaAnimator4.SetBool("ostiado", true);
             agenteAbuela4.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Chica1")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             chicaAnimator1.SetBool("ostiado", true);
             agenteChica1.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Chica2")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             chicaAnimator2.SetBool("ostiado", true);
             agenteChica2.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
         if (collider.gameObject.name == "Chica3")
         {
             audioPunyo.Play();
-            txtPuntos.text = "Puntos: " + puntos++;
+            txtPuntos.text = "Puntos: " + puntuacionActual++;
             chicaAnimator3.SetBool("ostiado", true);
             agenteChica3.isStopped = true;
+            GameControllerPPref.StorePuntos(puntuacionActual);
 
         }
     }

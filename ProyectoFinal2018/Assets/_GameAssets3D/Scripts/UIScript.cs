@@ -19,7 +19,11 @@ public class UIScript : MonoBehaviour {
 	void Update () {
 		
 	}
-    public void BotonInicioNivel1() {
+    public void BotonSeleccionNiveles() {
+        SceneManager.LoadScene(1);
+    }
+    public void BotonInicioNivel1()
+    {
         SceneManager.LoadScene(2);
     }
     public void BotonInicioNivel2() {
