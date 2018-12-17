@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class IntroScript : MonoBehaviour {
+   
+  
 
-	// Use this for initialization
-	void Start () {
+
+
+    private void Awake()
+    {
+        
+    }
+    // Use this for initialization
+    void Start () {
+       
+
         Invoke("CargarEscena", 4);
 	}
 	

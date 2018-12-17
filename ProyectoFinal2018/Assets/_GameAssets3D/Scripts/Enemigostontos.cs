@@ -49,6 +49,7 @@ public class Enemigostontos : MonoBehaviour {
      void Update() {
         if (puntos >= puntosAlmacenados + 5) {
             SaludoFinal();
+            GameControllerPPref.StorePuntos(puntosAlmacenados + 5);
 
         }
 
@@ -62,6 +63,7 @@ public class Enemigostontos : MonoBehaviour {
         audioPrimero.Stop();
         camaraPpal.gameObject.SetActive(false);
         camaraSec.gameObject.SetActive(true);
+        GameControllerPPref.StorePuntos(puntos);
     }
 
     public void RotarAleatoriamente() {
@@ -97,6 +99,7 @@ public class Enemigostontos : MonoBehaviour {
 
             puntos = puntos + 1;
             txtPuntos.text = "Puntuacion: " + puntos;
+            GameControllerPPref.StorePuntos(puntos);
 
 
             GetComponent<Animator>().SetBool("ostiado", true);
