@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ArtilleriaScript : MonoBehaviour
 {
 
-    private float speed = 200.0f;
+
     [SerializeField] GameObject prefabProyectil;
     [SerializeField] Transform puntoGeneracion;
 
@@ -37,18 +37,6 @@ public class ArtilleriaScript : MonoBehaviour
 
 
 
-        /* float rotationY = Input.GetAxis("Vertical") * speed;
-         float rotationX = Input.GetAxis("Horizontal") * speed;
-
-
-         rotationY *= Time.deltaTime;
-         rotationX *= Time.deltaTime;
-
-
-         transform.Rotate(rotationY, 0, 0);
-
-
-         transform.Rotate(0, rotationX, 0);*/
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(0, -1, 0);

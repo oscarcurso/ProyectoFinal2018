@@ -9,7 +9,7 @@ public class ProyectilScript : MonoBehaviour {
     [SerializeField] Text txtPuntos;
     [SerializeField] Text txtVida;
     Enemigostontos scriptEnemigo;
-    int puntos = 0;
+    
 
 
 
