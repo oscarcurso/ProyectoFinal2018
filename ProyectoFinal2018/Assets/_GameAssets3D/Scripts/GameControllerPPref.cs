@@ -63,4 +63,5 @@ public class GameControllerPPref : MonoBehaviour {
         }
         return vidas;
     }
+   
 }
