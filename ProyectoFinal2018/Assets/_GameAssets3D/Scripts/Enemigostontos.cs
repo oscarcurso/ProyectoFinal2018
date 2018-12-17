@@ -47,15 +47,8 @@ public class Enemigostontos : MonoBehaviour {
     }
 
      void Update() {
-        if (puntos >= 5)
-        {
-            audioPrimero.Stop();
-           
-            camaraPpal.gameObject.SetActive(false);
-            camaraSec.gameObject.SetActive(true);
-            
-            
-            
+        if (puntos >= puntosAlmacenados + 5) {
+            SaludoFinal();
 
         }
 
@@ -64,6 +57,13 @@ public class Enemigostontos : MonoBehaviour {
        
 
     }
+
+    private void SaludoFinal() {
+        audioPrimero.Stop();
+        camaraPpal.gameObject.SetActive(false);
+        camaraSec.gameObject.SetActive(true);
+    }
+
     public void RotarAleatoriamente() {
         float rotacion = Random.Range(0f, 360f);
 

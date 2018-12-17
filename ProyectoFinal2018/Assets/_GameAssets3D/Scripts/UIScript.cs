@@ -17,11 +17,11 @@ public class UIScript : MonoBehaviour {
 
         if (maxPunt != 0)
         {
-            btnEscena2.gameObject.SetActive(false);
+            btnEscena2.gameObject.SetActive(true);
         }
         else
         {
-            btnEscena2.gameObject.SetActive(true);
+            btnEscena2.gameObject.SetActive(false);
         }
     }
 
