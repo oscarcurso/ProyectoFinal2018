@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Enemigostontos : MonoBehaviour {
 
@@ -19,6 +20,7 @@ public class Enemigostontos : MonoBehaviour {
     [SerializeField] Text txtPuntos;
     int puntosAlmacenados;
     int vidasAlmacenadas;
+
 
 
 
