@@ -30,7 +30,7 @@ public class UIScript : MonoBehaviour {
     void Start () {
        
         
-        int puntos= GameControllerPPref.GetPuntos();
+      
         txtMaxPuntuacion.text = "Máxima Puntuacion: " + maxPunt; 
 	}
 	
